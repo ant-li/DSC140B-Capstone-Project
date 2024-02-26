@@ -5,7 +5,13 @@
 ### Mentor: Tauhidur Rahman (trahman@ucsd.edu)
 
 # Introduction
+## What's the Problem?
+## What can we do?
 # Data
+## Data Cleaning
 # Methods
+## Models & Metrics
+## Transfer Learning
+## Addressing Overfitting
 # Results
 # Discussion
