@@ -1,0 +1,59 @@
+/* assets/css/methods.css */
+
+.methods-section {
+    margin: 20px auto; /* Centers the section and adds margin */
+    padding: 20px;
+    background-color: #ffffff; /* Adds background color for legibility */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* More pronounced shadow for depth */
+    border-radius: 5px; /* Slightly rounds the corners of the sections */
+    max-width: 1200px; /* Sets a max-width for larger screens */
+}
+
+.methods-section + .methods-section {
+    margin-top: 60px; /* Adds more space between sections */
+}
+
+.text-and-image {
+    display: block; /* Stacks the text and image on top of each other for columnar layout */
+    margin-bottom: 60px;
+}
+
+.text-content {
+    padding: 20px;
+    text-align: justify;
+}
+
+.image-content {
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0; /* Adds vertical space around images */
+}
+
+.image-content img {
+    max-width: 80%; /* Sets max width for images */
+    height: auto;
+    border-radius: 5px; /* Rounds the corners of images */
+    margin: 0 auto; /* Centers image */
+}
+
+.caption {
+    font-size: 0.9em;
+    color: #777;
+    text-align: center; /* Centers the caption text */
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .methods-section {
+        margin: 20px 15px; /* Adjusts margin for mobile */
+        padding: 20px;
+    }
+
+    .text-content, .image-content {
+        padding: 15px; /* Adjusts padding for mobile */
+    }
+
+    .image-content img {
+        max-width: 100%; /* Allows image to fill container on small screens */
+    }
+}
