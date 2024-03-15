@@ -10,9 +10,7 @@ title: Methods
             <p>Understanding the differences between Transformers and CNN architectures is crucial for developing
                 effective emotion recognition models. While CNNs are traditionally favored for image-related tasks,
                 Vision Transformers have recently been adapted for certain computer vision tasks, offering promising
-                results thanks to their
-                attention mechanisms. We explore both architectures to evaluate their performance in the context of our
-                project.</p>
+                results thanks to their attention mechanisms. We explore both architectures to evaluate their performance in the context of our project.</p>
 
             <p>In the realm of machine learning, particularly within the scope of image processing and facial expression
                 recognition, two primary model architectures have emerged as frontrunners: Convolutional Neural Networks
@@ -20,6 +18,7 @@ title: Methods
                 way we implement emotion recognition models.</p>
 
             <h3>Convolutional Neural Networks (CNNs)</h3>
+            <img src="/imgs/resnet-18-arch.png" alt="ResNet-18 Architecture" class="architecture-image">
             <p>CNNs have long been the backbone of image processing tasks, renowned for their efficiency in handling
                 spatial data. At their core, CNNs utilize convolutional layers to filter inputs for useful information,
                 using pooling layers to reduce dimensionality and fully connected layers to make predictions. This
@@ -33,12 +32,13 @@ title: Methods
                 <li>Well-suited for tasks with a strong emphasis on texture, shape, and local features recognition.</li>
             </ul>
 
-            <h3>Transformers</h3>
-            <p>Originally designed for natural language processing (NLP) tasks, Transformers have recently made
-                significant strides in the field of image recognition. Unlike CNNs, Transformers do not inherently
+            <h3>Vision Transformers</h3>
+            <img src="/imgs/vit-arch.png" alt="Vision Transformer Architecture" class="architecture-image">
+            <p>Originally designed for natural language processing (NLP) tasks, Vision Transformers have recently made
+                significant strides in the field of image recognition. Unlike CNNs, Vision Transformers do not inherently
                 process data in a sequential or hierarchical manner. Instead, they rely on self-attention mechanisms to
                 weigh the importance of different parts of the input data, irrespective of their position. This allows
-                Transformers to capture global dependencies and relationships within the data, offering a new
+                Vision Transformers to capture global dependencies and relationships within the data, offering a new
                 perspective on tasks traditionally dominated by CNNs.</p>
 
             <ul>
@@ -55,7 +55,7 @@ title: Methods
                 expressions. However, their sometimes limited ability to grasp the broader context or more abstract
                 emotional cues can be a drawback.</p>
 
-            <p>On the other hand, Transformers, with their ability to understand global dependencies, offer a novel
+            <p>On the other hand, Vision Transformers, with their ability to understand global dependencies, offer a novel
                 approach to recognizing emotions. They can potentially capture more complex emotional expressions that
                 span across the entire face, rather than just local features. This makes them an exciting alternative
                 for advancing emotion recognition technologies, especially in applications where understanding the
@@ -67,11 +67,11 @@ title: Methods
                 that will drive the future of emotional recognition technology forward.</p>
         </div>
         <div class="image-content">
-            <img src="/assets/images/transformers-vs-cnn.png" alt="Transformers vs CNN Architectures">
-            <p class="caption">Comparison of Transformers and CNN architectures in emotion recognition.</p>
+            <p class="caption">Comparison of Transformers and CNN architectures in emotion recognition, featuring ResNet-18 and Vision Transformer models.</p>
         </div>
     </div>
 </div>
+
 
 <!-- Remaining sections -->
 
@@ -89,7 +89,10 @@ title: Methods
                 images, we extracted and saved the output of the last layer as an embedding, which distilled
                 hundreds of pretrained features into a format suitable for further classification tasks.</p>
             <p>We explored two methods:</p>
+            <img src="/imgs/training-loss-transfer-learning.png" alt="ResNet-18 Architecture" class="architecture-image">
+
             <ol>
+                
                 <li><strong>Full Layer Training</strong>: Fine-tuning all layers of a pretrained model to harness
                     comprehensive embeddings for subsequent classifiers.</li>
                 <li><strong>Partial Layer Training</strong>: Selectively freezing the initial layers of a
