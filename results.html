@@ -15,6 +15,9 @@ title: Results
                 respectively. Partial layer training showed slight improvements, bring accuracy and F1 Score to 0.611
                 and 0.608
                 respectively. The usage of data augmentation yielded the most substantial improvement, with the accuracy
+                increasing to 0.619 and the F1 Score to 0.641 on the same dataset.</p>
+                
+                <p></p>On the Dartmouth Database, baseline figures were 0.604 (accuracy) and 0.597 (F1 Score).
                 increasing to 0.619 and the F1 Score to 0.641 on the same dataset.
 
                 On the Dartmouth Database, baseline figures were 0.604 (accuracy) and 0.597 (F1 Score).
@@ -33,12 +36,17 @@ title: Results
             <div class="image-content">
                 <img src="imgs/vit_table.png" alt="Vision Transformer Performance" class="architecture-image">
             </div>
+            <p>The Vision Transformer model had a baseline accuracy of 0.637 and F1 Score of 0.593 on the FER2013 dataset.
+                Partial layer training marginally increased these to 0.657 (accuracy) and 0.652 (F1 Score). Data augmentation
+                significantly boosted performance, yielding an accuracy of 0.697 and F1 Score of 0.694.</p>
             <p>The Vision Transformer model had a baseline accuracy of 0.637 and F1 Score of 0.593 on the FER2013
                 dataset.
                 Partial layer training marginally increased these to 0.657 (accuracy) and 0.652 (F1 Score). Data
                 augmentation
                 significantly boosted performance, yielding an accuracy of 0.697 and F1 Score of 0.694.
 
+                <p>On the Dartmouth dataset, the baseline yielded an accuracy and F1 score of 0.642 and 0.631 respectively. The application 
+                of partial layer training improved the accuracy to 0.668 and the F1 Score to 0.661. Notably, data augmentation 
                 On the Dartmouth dataset, the baseline yielded an accuracy and F1 score of 0.642 and 0.631 respectively.
                 The application
                 of partial layer training improved the accuracy to 0.668 and the F1 Score to 0.661. Notably, data
@@ -60,6 +68,12 @@ title: Results
             <div class="image-content">
                 <img src="imgs/efficientnet_table.png" alt="EfficientNetB0 Performance" class="architecture-image">
             </div>
+            <p>EfficientNetB0 had a baseline accuracy of 0.515 and F1 Score of 0.511 on the FER2013 dataset. 
+                Partial layer training slightly increased accuracy to 0.530 but reduced the F1 Score to 0.496. 
+                Data augmentation improved both metrics to an accuracy of 0.571 and F1 Score of 0.534.</p>
+            <p>
+                On the Dartmouth dataset, the baseline showed an accuracy of 0.520 and F1 Score of 0.511. With 
+                partial layer training, these metrics improved to 0.558 (accuracy) and 0.542 (F1 Score). Data 
             <p>EfficientNetB0 had a baseline accuracy of 0.515 and F1 Score of 0.511 on the FER2013 dataset.
                 Partial layer training slightly increased accuracy to 0.530 but reduced the F1 Score to 0.496.
                 Data augmentation improved both metrics to an accuracy of 0.571 and F1 Score of 0.534.
@@ -80,9 +94,18 @@ title: Results
         <div class="text-content">
             <h2>Common Performance Trends</h2>
             <div class="image-content">
-                <img src="imgs/efficientnet_table.png" alt="EfficientNetB0 Performance" class="architecture-image">
+                <img src="imgs/fer-results.png" alt="EfficientNetB0 Performance" class="architecture-image">
             </div>
-            <p>blank
+            <div class="image-content">
+                <img src="imgs/dartmouth-results.png" alt="EfficientNetB0 Performance" class="architecture-image">
+            </div>
+            <p>The application of data augmentation has shown significance improvement of facial recognition models. By 
+                including more training data variation in terms lighting and partial occlusions, accuracy and F1 scores 
+                in all models saw a boost to its performance. This has demonstrated the importance of using a diverse 
+                dataset that allows better generalizations. </p>
+            <p>
+                Applying partial layer training has resulted in less drastic performance improvements in comparison to data 
+                augmentation, however, this method took advantage of pre-trained models’ ability to learn deep features only.
             </p>
         </div>
 
