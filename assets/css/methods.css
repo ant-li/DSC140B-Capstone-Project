@@ -16,6 +16,9 @@
     padding: 20px;
     text-align: left; /* Align text to the left within these divs */
 }
+.text-content h2, .text-content h3 {
+    text-align: center; /* Center-aligns h2 and h3 titles */
+}
 
 .image-content img {
     display: block; /* Makes the image a block element */
@@ -24,6 +27,25 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     margin: 0 auto; /* Centers the image */
+}
+
+.double-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.architecture-image {
+    max-width: 45%; /* Adjust to fit two images side by side */
+    height: auto;
+    margin: 10px; /* Adds space around the images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    .architecture-image {
+        max-width: 90%; /* Larger size for smaller screens */
+    }
 }
 
 .methods-section + .methods-section {
@@ -45,13 +67,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Light shadow for subtle depth */
 }
 
-.image-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px; /* Rounded corners for images */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Consistency in shadow */
-}
-
 .caption {
     font-size: 0.9em;
     color: #333; /* Dark color for readability */
@@ -59,15 +74,26 @@
     margin-top: 8px;
 }
 
+.model-image {
+    max-width: 25%; /* Adjust this value as needed */
+    height: auto;
+    margin: 0 auto; /* Centers the image */
+    display: block;
+}
+
+
 @media (max-width: 768px) {
     .text-content, .image-content {
-        padding: 15px;
-        margin: 10px 0; /* Adjusted for a tighter layout on mobile */
+        
         background-color: transparent; /* Removes background color for mobile */
         box-shadow: none; /* Removes shadow for a cleaner look */
     }
 
     .methods-section {
         padding: 15px; /* Adjusted padding for a tighter layout */
+    }
+
+    .model-image {
+        max-width: 90%;
     }
 }
