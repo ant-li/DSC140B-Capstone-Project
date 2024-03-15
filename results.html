@@ -1,0 +1,88 @@
+---
+layout: default
+title: Results
+---
+
+<div class="methods-section">
+    <div class="text-and-image">
+        <div class="text-content">
+            <h2>Resnet18</h2>
+            <img src="imgs/resnet18_table.png" alt="ResNet-18 Performance" class="architecture-image">
+            <p>For Resnet18, the baseline model achieved an accuracy of 0.548 and an F1
+                Score of 0.542 on the FER2013 dataset. With partial layer training, a slight improvement
+                was observed, bringing the accuracy to 0.611 and the F1 Score to 0.608. The application of
+                data augmentation techniques yielded the most substantial improvement, with the accuracy
+                increasing to 0.619 and the F1 Score to 0.641 on the same dataset.
+                
+                On the Dartmouth Database, baseline figures were 0.604 (accuracy) and 0.597 (F1 Score).
+                Partial layer training led to slight improvements, achieving an accuracy of 0.653 and F1
+                Score of 0.655. Data augmentation had a significant impact, increasing accuracy to 0.757
+                and F1 Score to 0.754.</p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Remaining sections -->
+
+
+
+<div class="methods-section">
+    <div class="text-and-image">
+        <div class="text-content">
+            <h2>Transfer Learning</h2>
+            <p>By leveraging the knowledge gained from pretrained models, we can significantly improve the
+                performance of our emotion recognition system. This section outlines our approach to transfer learning,
+                including the models and datasets we used.</p>
+            <h3>Training on Embeddings</h3>
+            <p>Our primary transfer learning approach focused on embeddings. Utilizing pretrained models to process
+                images, we extracted and saved the output of the last layer as an embedding, which distilled
+                hundreds of pretrained features into a format suitable for further classification tasks.</p>
+            <p>We explored two methods:</p>
+            <img src="imgs/training-loss-transfer-learning.png" alt="ResNet-18 Architecture" class="architecture-image">
+
+            <ol>
+                
+                <li><strong>Full Layer Training</strong>: Fine-tuning all layers of a pretrained model to harness
+                    comprehensive embeddings for subsequent classifiers.</li>
+                <li><strong>Partial Layer Training</strong>: Selectively freezing the initial layers of a
+                    pretrained model. These earlier layers typically capture universal features like textures and
+                    contours, while the latter layers, which are left unfrozen, are refined to discern more complex and
+                    task-specific patterns. This method allows us to concentrate on deep features that are more directly
+                    relevant to recognizing the nuances of facial expressions for emotion detection.
+                </li>
+            </ol>
+            <p>This tailored approach allowed us to leverage pretrained model strengths, concentrating the learning on
+                the most relevant features for detecting children's facial expressions and thereby boosting performance
+                and efficiency.</p>
+        </div>
+        <div class="image-content">
+            <img src="/assets/images/transfer-learning-diagram.png" alt="Transfer Learning Process">
+            <p class="caption">Visual representation of the transfer learning process from data preprocessing to
+                classifier training.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="methods-section">
+    <div class="text-and-image">
+        <div class="text-content">
+            <h2>Data Augmentation Techniques</h2>
+            <p>To prepare our models for the variability encountered in real-world scenarios, we employed a series of
+                data augmentation techniques. These methods enrich our dataset with images that simulate a range of
+                environmental conditions and potential occlusions that one might encounter in practical applications.
+            </p>
+            <p>Utilizing OpenCV, we introduced occlusions by overlaying black squares over the eye regions in images,
+                mimicking situations where parts of the face are obscured. We also varied the brightness of images
+                within a specific range to replicate different lighting conditions. These augmentations not only
+                increased the robustness of our models but also effectively doubled our dataset size, thereby enhancing
+                the models' ability to generalize to new, unseen data.</p>
+        </div>
+        <div class="image-content">
+            <img src="/assets/images/data-augmentation-techniques.png" alt="Data Augmentation Techniques">
+            <p class="caption">Examples of data augmentation techniques applied to our dataset.</p>
+        </div>
+    </div>
+</div>
