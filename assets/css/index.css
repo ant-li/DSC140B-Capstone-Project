@@ -69,23 +69,13 @@ body {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     flex-wrap: wrap;
-    /*
-    transform: translateY(30px);
-    animation: fadeInUp 1s ease-out forwards;
-    animation-delay: 0.5s; 
-    opacity: 0; 
-    transform: translateY(30px); 
-    visibility: hidden; 
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
-    */
-    
 }
 
 .section.visible {
     opacity: 1;
     transform: translateY(0);
-    visibility: visible; /* Make section fully visible when it becomes visible */
-    transition-delay: 0s; /* Reset transition delay to show elements immediately when they become visible */
+    visibility: visible;
+    transition-delay: 0s;
 }
 
 .section:hover {
@@ -93,7 +83,6 @@ body {
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Adjusting the animation delay for each section to create a cascading effect */
 .section:nth-child(odd) {
     animation-delay: 0.75s;
 }
@@ -108,7 +97,6 @@ body {
     margin: 20px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .section {
         flex-direction: column;

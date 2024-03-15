@@ -1,7 +1,7 @@
 /* assets/css/navbar.css */
 
 nav {
-    background-color: #263B4F; /* Darker blue from the hero section for cohesion */
+    background-color: #263B4F; 
     color: white;
     padding: 10px 20px;
 }
@@ -9,21 +9,20 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    padding: 0 15px; /* Slightly increased padding for links */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    padding: 0 15px; 
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #E1E2E1; /* Lighter for a subtle hover effect, adjusted for readability */
-    background-color: transparent; /* Keeps background transparent on hover */
-    border-radius: 4px; /* Soften edges, maintaining the original design intent */
+    color: #E1E2E1;
+    background-color: transparent;
+    border-radius: 4px;
 }
 
 nav div {
-    display: inline-block; /* Retains the inline-level layout */
+    display: inline-block;
 }
 
-/* Clearfix for floated elements, maintaining the structure */
 nav::after {
     content: "";
     display: table;
