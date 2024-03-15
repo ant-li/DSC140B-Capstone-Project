@@ -115,15 +115,20 @@ title: Methods
 <div class="methods-section">
     <div class="text-and-image">
         <div class="text-content">
-            <h2>Pretrained / Full Layer Training</h2>
-            <p>The decision between using a fully pretrained model or further training the entire model layers depends
-                on the specific requirements of the task at hand. We discuss the pros and cons of each method, our
-                experimental setup, and the outcomes of our approach.</p>
-            <!-- Placeholder for more detailed text -->
+            <h2>Data Augmentation Techniques</h2>
+            <p>To prepare our models for the variability encountered in real-world scenarios, we employed a series of
+                data augmentation techniques. These methods enrich our dataset with images that simulate a range of
+                environmental conditions and potential occlusions that one might encounter in practical applications.
+            </p>
+            <p>Utilizing OpenCV, we introduced occlusions by overlaying black squares over the eye regions in images,
+                mimicking situations where parts of the face are obscured. We also varied the brightness of images
+                within a specific range to replicate different lighting conditions. These augmentations not only
+                increased the robustness of our models but also effectively doubled our dataset size, thereby enhancing
+                the models' ability to generalize to new, unseen data.</p>
         </div>
         <div class="image-content">
-            <img src="/assets/images/pretrained-full-layer-training.png" alt="Pretrained vs Full Layer Training">
-            <p class="caption">Delineating the strategies for pretrained and full layer model training.</p>
+            <img src="/assets/images/data-augmentation-techniques.png" alt="Data Augmentation Techniques">
+            <p class="caption">Examples of data augmentation techniques applied to our dataset.</p>
         </div>
     </div>
 </div>

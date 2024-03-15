@@ -69,13 +69,16 @@ body {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     flex-wrap: wrap;
-    transform: translateY(30px); /* Initial state for animation */
-    animation: fadeInUp 1s ease-out forwards; /* Apply animation */
-    animation-delay: 0.5s; /* Start after the hero animation */
-    opacity: 0; /* Initial state for animation */
-    transform: translateY(30px); /* Initial state for animation */
-    visibility: hidden; /* Make sections not visible initially */
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; /* Include visibility in the transition */
+    /*
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s; 
+    opacity: 0; 
+    transform: translateY(30px); 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    */
+    
 }
 
 .section.visible {
