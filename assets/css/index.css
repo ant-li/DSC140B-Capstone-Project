@@ -40,9 +40,22 @@ body {
 
 .tagline {
     font-style: italic;
+    font-weight: bold;
     opacity: 0.9;
     margin-top: 15px;
     font-size: 1.2rem;
+}
+.tagline2 {
+    font-style: italic;
+    opacity: 0.9;
+    margin-top: 0px;
+    font-size: 1.2rem;
+}
+
+.tagline3 {
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 1rem;
 }
 
 /* Keyframes for fadeInUp animation */
@@ -82,10 +95,11 @@ body {
 }
 .center-image {
     display: block;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%; /* Ensures image does not exceed its container's width */
-    width: 50px; /* Adjust as needed */
+    width: 400px; /* Adjust as needed */
     height: auto; /* Keeps the aspect ratio intact */
 }
 
