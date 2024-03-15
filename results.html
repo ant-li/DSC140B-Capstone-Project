@@ -1,75 +1,25 @@
 ---
 layout: default
-title: Methods
+title: Results
 ---
 
 <div class="methods-section">
     <div class="text-and-image">
         <div class="text-content">
-            <h2>Transformers vs CNN Architectures</h2>
-            <p>Understanding the differences between Transformers and CNN architectures is crucial for developing
-                effective emotion recognition models. While CNNs are traditionally favored for image-related tasks,
-                Vision Transformers have recently been adapted for certain computer vision tasks, offering promising
-                results thanks to their attention mechanisms. We explore both architectures to evaluate their performance in the context of our project.</p>
-
-            <p>In the realm of machine learning, particularly within the scope of image processing and facial expression
-                recognition, two primary model architectures have emerged as frontrunners: Convolutional Neural Networks
-                (CNNs) and Vision Transformers. Each architecture brings its unique strengths to the table, shaping the
-                way we implement emotion recognition models.</p>
-
-            <h3>Convolutional Neural Networks (CNNs)</h3>
-            <img src="imgs/resnet-18-arch.png" alt="ResNet-18 Architecture" class="architecture-image">
-            <p>CNNs have long been the backbone of image processing tasks, renowned for their efficiency in handling
-                spatial data. At their core, CNNs utilize convolutional layers to filter inputs for useful information,
-                using pooling layers to reduce dimensionality and fully connected layers to make predictions. This
-                hierarchical approach enables CNNs to capture spatial hierarchies in images, making them particularly
-                adept at recognizing facial features and expressions. Their robustness and relative simplicity have made
-                them a go-to choice for tasks requiring the analysis of visual data.</p>
-
-            <ul>
-                <li>Excellent at capturing spatial hierarchies and patterns within images.</li>
-                <li>Efficient in terms of computational resources, especially for image-related tasks.</li>
-                <li>Well-suited for tasks with a strong emphasis on texture, shape, and local features recognition.</li>
-            </ul>
-
-            <h3>Vision Transformers</h3>
-            <img src="imgs/vit-arch.png" alt="Vision Transformer Architecture" class="architecture-image">
-            <img src="imgs/hdsi-white.png" alt="Vision Transformer Architecture" class="architecture-image">
-            <p>Originally designed for natural language processing (NLP) tasks, Vision Transformers have recently made
-                significant strides in the field of image recognition. Unlike CNNs, Vision Transformers do not inherently
-                process data in a sequential or hierarchical manner. Instead, they rely on self-attention mechanisms to
-                weigh the importance of different parts of the input data, irrespective of their position. This allows
-                Vision Transformers to capture global dependencies and relationships within the data, offering a new
-                perspective on tasks traditionally dominated by CNNs.</p>
-
-            <ul>
-                <li>Capable of capturing long-range dependencies within the data, offering a broader understanding of
-                    context and relationships.</li>
-                <li>Highly flexible and adaptable to various types of input data, beyond just images.</li>
-                <li>Demonstrates superior performance on tasks requiring an understanding of complex patterns and global
-                    features.</li>
-            </ul>
-
-            <h3>Implications for Emotion Recognition</h3>
-            <p>When it comes to emotion recognition, both architectures offer compelling advantages. CNNs, with their
-                adeptness at detecting spatial patterns and features, excel at identifying the subtle nuances of facial
-                expressions. However, their sometimes limited ability to grasp the broader context or more abstract
-                emotional cues can be a drawback.</p>
-
-            <p>On the other hand, Vision Transformers, with their ability to understand global dependencies, offer a novel
-                approach to recognizing emotions. They can potentially capture more complex emotional expressions that
-                span across the entire face, rather than just local features. This makes them an exciting alternative
-                for advancing emotion recognition technologies, especially in applications where understanding the
-                nuanced expressions of children is crucial.</p>
-
-            <p>In our project, we aim to harness the strengths of both architectures, exploring how each can contribute
-                to creating a more nuanced and accurate emotion recognition model. By comparing their performance across
-                diverse datasets, including those focused exclusively on children's faces, we seek to uncover insights
-                that will drive the future of emotional recognition technology forward.</p>
+            <h2>Resnet18</h2>
+            <img src="imgs/resnet18_table.png" alt="ResNet-18 Performance" class="architecture-image">
+            <p>For Resnet18, the baseline model achieved an accuracy of 0.548 and an F1
+                Score of 0.542 on the FER2013 dataset. With partial layer training, a slight improvement
+                was observed, bringing the accuracy to 0.611 and the F1 Score to 0.608. The application of
+                data augmentation techniques yielded the most substantial improvement, with the accuracy
+                increasing to 0.619 and the F1 Score to 0.641 on the same dataset.
+                
+                On the Dartmouth Database, baseline figures were 0.604 (accuracy) and 0.597 (F1 Score).
+                Partial layer training led to slight improvements, achieving an accuracy of 0.653 and F1
+                Score of 0.655. Data augmentation had a significant impact, increasing accuracy to 0.757
+                and F1 Score to 0.754.</p>
         </div>
-        <div class="image-content">
-            <p class="caption">Comparison of Transformers and CNN architectures in emotion recognition, featuring ResNet-18 and Vision Transformer models.</p>
-        </div>
+
     </div>
 </div>
 
