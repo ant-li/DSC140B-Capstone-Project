@@ -87,10 +87,15 @@ title: Results
             <p>The application of data augmentation has shown significance improvement of facial recognition models. By 
                 including more training data variation in terms lighting and partial occlusions, accuracy and F1 scores 
                 in all models saw a boost to its performance. This has demonstrated the importance of using a diverse 
-                dataset that allows better generalizations. </p>
+                dataset that allows better generalizations. On the other hand, applying partial layer training has resulted in less drastic 
+                performance improvements in comparison to data augmentation, however, this method took advantage of pre-trained 
+                models’ ability to learn deep features only.</p>
             <p>
-                Applying partial layer training has resulted in less drastic performance improvements in comparison to data 
-                augmentation, however, this method took advantage of pre-trained models’ ability to learn deep features only.
+                The different performance and improvements observed between ResNet18, Vision Transformer, and EfficientNetB0 
+                demonstrate the importance of architecture in facial expression recognition problems. Resnet18 and Vision 
+                Transformer were very responsive to our optimization techniques and showed that their suited better for 
+                capturing children’s expression. However, EfficientNetB0 poor performance scores highlights that model 
+                architecture is important when looking at specific tasks.
             </p>
         </div>
 
