@@ -16,6 +16,9 @@
     padding: 20px;
     text-align: left; /* Align text to the left within these divs */
 }
+.text-content h2, .text-content h3 {
+    text-align: center; /* Center-aligns h2 and h3 titles */
+}
 
 .image-content img {
     display: block; /* Makes the image a block element */
